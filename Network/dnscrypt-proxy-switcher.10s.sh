@@ -13,6 +13,22 @@
 # Theme: classic or emoji
 THEME="emoji"
 
+# DOH-blahdns
+DOH_BLAH_IPS="127.0.0.1"
+DOH_BLAH_NAME="DOH-BLAHDNS"
+
+# BLAHDNS
+BLAHDNS_IPS="45.63.124.65"
+BLAHDNS_NAME="BLAHDNS"
+
+# NTUT
+NTUT_IPS="140.124.13.2"
+NTUT_NAME="NTUT"
+
+# CLOUDFLARE
+CLOUDFLARE_IPS="1.0.0.1"
+CLOUDFLARE_NAME="CLOUDFLARE"
+
 # Non-authenticated resolver IP addresses
 ADDITIONAL_IPS="9.9.9.9"
 
@@ -192,4 +208,8 @@ echo "Use default DNS | terminal=false refresh=true bash=\"${0}\" param1=empty"
 echo "Use dnscrypt-proxy | terminal=false refresh=true bash=\"${0}\" param1='${DNSCRYPT_PROXY_IPS}'"
 echo "Use dnscrypt-proxy + ${ADDITIONAL_NAME} | terminal=false refresh=true bash=\"${0}\" param1='${DNSCRYPT_PROXY_IPS} ${ADDITIONAL_IPS}'"
 echo "Use ${ADDITIONAL_NAME} | terminal=false refresh=true bash=\"${0}\" param1='${ADDITIONAL_IPS}'"
+echo "Use ${BLAHDNS_NAME} | terminal=false refresh=true bash=\"${0}\" param1='${BLAHDNS_IPS}'"
+echo "Use ${DOH_BLAH_NAME} | terminal=false refresh=true bash=\"${0}\" param1='${DOH_BLAH_IPS}'"
+echo "Use ${NTUT_NAME} | terminal=false refresh=true bash=\"${0}\" param1='${NTUT_IPS}'"
+echo "Use ${CLOUDFLARE_NAME} | terminal=false refresh=true bash=\"${0}\" param1='${CLOUDFLARE_IPS}'"
 echo "View the dnscrypt-proxy public servers list | href=https://dnscrypt.info/public-servers"
