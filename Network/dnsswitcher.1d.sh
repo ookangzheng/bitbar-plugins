@@ -4,12 +4,12 @@
 # The list of DNS options should be defined on this file
 #
 # <bitbar.title>DNS Switcher</bitbar.title>
-# <bitbar.version>v1.4</bitbar.version>
-# <bitbar.author>M Saiqul Haq</bitbar.author>
-# <bitbar.author.github>saiqulhaq</bitbar.author.github>
+# <bitbar.version>v1.5</bitbar.version>
+# <bitbar.author>ookangzheng</bitbar.author>
+# <bitbar.author.github>ookangzheng</bitbar.author.github>
 # <bitbar.desc>Switch DNS to your defined DNS options.</bitbar.desc>
 # <bitbar.image>http://oi66.tinypic.com/2yplm4h.jpg</bitbar.image>
-# <bitbar.abouturl>https://github.com/matryer/bitbar-plugins/blob/master/Network/dnsswitcher.1d.sh</bitbar.abouturl>
+# <bitbar.abouturl>https://github.com/ookangzheng/bitbar-plugins/edit/master/Network/dnsswitcher.1d.sh</bitbar.abouturl>
 
 
 # Configuration
@@ -18,6 +18,28 @@ network_service="Wi-FI"
 
 # add or remove list of DNS options below, don't forget to make it enabled. see below
 # shellcheck disable=2034
+localhost="127.0.0.1
+           ::1"
+
+localhost+blahdns="127.0.0.1
+                   ::1
+                   45.63.124.65
+                   
+                   2001:19f0:7002:1249:5400:1ff:fe70:15a6"
+                   
+localhost+NTUT="127.0.0.1
+                ::1
+                
+                140.124.13.2
+                140.124.13.1"
+
+NTUT="140.124.13.2
+      140.124.13.1"
+
+blahdns="45.63.124.65
+
+         2001:19f0:7002:1249:5400:1ff:fe70:15a6"
+
 google="8.8.8.8
         8.8.4.4
 
@@ -25,28 +47,18 @@ google="8.8.8.8
         2001:4860:4860::8844"
 
 # shellcheck disable=2034
-level3="209.244.0.3
-        209.244.0.4
+cleanbrowsing="185.228.168.9
 
-        4.2.2.1
-        4.2.2.2
+               2a0d:2a00:1::2"
 
-        4.2.2.3
-        4.2.2.4"
+cloudflare="1.0.0.1
+            1.1.1.1
+            
+            2606:4700:4700::1001"
+   
+quad9="9.9.9.9
 
-# shellcheck disable=2034
-opendns="208.67.222.222
-        208.67.220.220"
-
-# shellcheck disable=2034
-norton="199.85.126.10
-        199.85.127.10
-
-        199.85.126.20
-        199.85.127.20
-
-        199.85.126.30
-        199.85.127.30"
+       2620:fe::fe"
 
 # shellcheck disable=2034
 default="empty"
