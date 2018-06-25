@@ -6,6 +6,7 @@
 # <bitbar.title>DNS Switcher</bitbar.title>
 # <bitbar.version>v1.5</bitbar.version>
 # <bitbar.author>ookangzheng</bitbar.author>
+# <bitbar.author>Original Author: M Saiqul Haq</bitbar.author>
 # <bitbar.author.github>ookangzheng</bitbar.author.github>
 # <bitbar.desc>Switch DNS to your defined DNS options.</bitbar.desc>
 # <bitbar.image>http://oi66.tinypic.com/2yplm4h.jpg</bitbar.image>
@@ -18,28 +19,28 @@ network_service="Wi-FI"
 
 # add or remove list of DNS options below, don't forget to make it enabled. see below
 # shellcheck disable=2034
-localhost="127.0.0.1
-           ::1"
+localhost="127.0.0.1"
 
-localhost+blahdns="127.0.0.1
+# shellcheck disable=2034
+localhostAndBlahdns="127.0.0.1
                    ::1
                    45.63.124.65
                    
                    2001:19f0:7002:1249:5400:1ff:fe70:15a6"
-                   
-localhost+NTUT="127.0.0.1
-                ::1
-                
+# shellcheck disable=2034        
+localhostAndNTUT="127.0.0.1
                 140.124.13.2
                 140.124.13.1"
-
+# shellcheck disable=2034
 NTUT="140.124.13.2
       140.124.13.1"
 
+# shellcheck disable=2034
 blahdns="45.63.124.65
 
          2001:19f0:7002:1249:5400:1ff:fe70:15a6"
 
+# shellcheck disable=2034
 google="8.8.8.8
         8.8.4.4
 
@@ -51,11 +52,11 @@ cleanbrowsing="185.228.168.9
 
                2a0d:2a00:1::2"
 
+# shellcheck disable=2034
 cloudflare="1.0.0.1
-            1.1.1.1
             
             2606:4700:4700::1001"
-   
+# shellcheck disable=2034   
 quad9="9.9.9.9
 
        2620:fe::fe"
@@ -63,7 +64,7 @@ quad9="9.9.9.9
 # shellcheck disable=2034
 default="empty"
 
-enabled_dns_address=(google level3 opendns norton default)
+enabled_dns_address=(default quad9 cloudflare cleanbrowsing blahdns google NTUT localhost localhostAndBlahdns localhostAndNTUT)
 ########################
 
 
